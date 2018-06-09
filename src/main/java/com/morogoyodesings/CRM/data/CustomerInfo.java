@@ -2,34 +2,45 @@ package com.morogoyodesings.CRM.data;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name="customers")
 public class CustomerInfo {
 	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="id")
 	private Long id;
-	
+	@Column(name="fName")
 	private String fName;
+	@Column(name= "lName")
 	private String lName;
+	@Column(name= "gender")
 	private String gender;
+	@Column(name= "address")
 	private String address;
+	@Column(name= "email")
 	private String email;
+	@Column(name= "birthday")
 	private Date birthday;
+	@Column(name= "profession")
 	private String profession;
+	@Column(name= "mobileNumber")
 	private String mobileNumber;
 	public CustomerInfo() {
 		
 	}
 	
 	
-	public CustomerInfo(int id, String fName, String lName, String gender, String address, String email, Date birthday,
+	public CustomerInfo(Long id, String fName, String lName, String gender, String address, String email, Date birthday,
 			String profession, String mobileNumber) {
 		super();
 		this.id = id;
@@ -45,12 +56,12 @@ public class CustomerInfo {
 	
 	
 	
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

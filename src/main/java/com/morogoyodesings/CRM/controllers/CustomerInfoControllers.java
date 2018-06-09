@@ -21,7 +21,7 @@ public class CustomerInfoControllers {
 	public String homePage(){
 		return "<h1>Welcome to your CRM</h1>";
 	}
-	@GetMapping("/info")
+	@GetMapping("info")
 	public List<CustomerInfo> getAllCustomers(){
 		return customerRepo.findAll();
 		

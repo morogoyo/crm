@@ -1,0 +1,16 @@
+INSERT INTO customers(fName,
+					lName,
+					gender,
+					address,
+					email,
+					profession,
+					mobileNumber,
+					birthday)
+			VALUES('Rene',
+					'Torres',
+					'Male',
+					'807 Sterling Spring Rd. Orlando Fl',
+					'torres.rene@outlook.com',
+					'Dev',
+					1234567,
+					'1979-10-11');
