@@ -17,13 +17,13 @@ public class CustomerInfoControllers {
 	@Autowired
 	private CustomerRepository customerRepo;
 	
-	@GetMapping("/")
+	@GetMapping("/home")
 	public String homePage(){
 		return "<h1>Welcome to your CRM</h1>";
 	}
-	@GetMapping("info")
+	@GetMapping
 	public List<Customers> getAllCustomers(){
-		return (List<Customers>) customerRepo.findAll();
+		return  customerRepo.findAll();
 		
 	}
 

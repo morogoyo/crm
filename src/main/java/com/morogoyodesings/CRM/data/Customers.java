@@ -9,37 +9,35 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name="customers")
+@Table(name = "customers")
 public class Customers {
-	
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="id")
+	@Column(name = "id")
 	private Long id;
-	@Column(name="fName")
+	@Column(name = "fName")
 	private String fName;
-	@Column(name= "lName")
+	@Column(name = "lName")
 	private String lName;
-	@Column(name= "gender")
+	@Column(name = "gender")
 	private String gender;
-	@Column(name= "address")
+	@Column(name = "address")
 	private String address;
-	@Column(name= "email")
+	@Column(name = "email")
 	private String email;
-	@Column(name= "birthday")
+	@Column(name = "birthday")
 	private Date birthday;
-	@Column(name= "profession")
+	@Column(name = "profession")
 	private String profession;
-	@Column(name= "mobileNumber")
+	@Column(name = "mobileNumber")
 	private String mobileNumber;
+
 	public Customers() {
-		
+		super();
 	}
-	
-	
+
 	public Customers(Long id, String fName, String lName, String gender, String address, String email, Date birthday,
 			String profession, String mobileNumber) {
 		super();
@@ -53,71 +51,77 @@ public class Customers {
 		this.profession = profession;
 		this.mobileNumber = mobileNumber;
 	}
-	
-	
-	
-	public Long getId() {
-		return id;
+
+	public String getAddress() {
+		return address;
 	}
 
-
-	public void setId(Long id) {
-		this.id = id;
+	public Date getBirthday() {
+		return birthday;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public String getfName() {
+		return fName;
+	}
 
 	public String getGender() {
 		return gender;
 	}
 
+	public Long getId() {
+		return id;
+	}
+
+	public String getlName() {
+		return lName;
+	}
+
+	public String getMobileNumber() {
+		return mobileNumber;
+	}
+
+	public String getProfession() {
+		return profession;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setfName(String fName) {
+		this.fName = fName;
+	}
 
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-	public String getAddress() {
-		return address;
-	}
-	public Date getBirthday() {
-		return birthday;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public String getfName() {
-		return fName;
-	}
-	public String getlName() {
-		return lName;
-	}
-	public String getMobileNumber() {
-		return mobileNumber;
-	}
-	public String getProfession() {
-		return profession;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public void setfName(String fName) {
-		this.fName = fName;
-	}
 	public void setlName(String lName) {
 		this.lName = lName;
 	}
+
 	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
+
 	public void setProfession(String profession) {
 		this.profession = profession;
 	}
-	
 
 }
