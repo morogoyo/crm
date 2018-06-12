@@ -1,11 +1,11 @@
 package com.morogoyodesings.CRM.repositories;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-import com.morogoyodesings.CRM.data.CustomerInfo;
+import com.morogoyodesings.CRM.data.Customers;
 
 
 
-public interface CustomerRepository extends JpaRepository<CustomerInfo, Integer> {
+public interface CustomerRepository extends CrudRepository<Customers, Long> {
 
 }

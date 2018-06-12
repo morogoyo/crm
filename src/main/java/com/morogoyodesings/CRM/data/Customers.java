@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="customers")
-public class CustomerInfo {
+public class Customers {
 	
 	
 	@Id
@@ -35,12 +35,12 @@ public class CustomerInfo {
 	private String profession;
 	@Column(name= "mobileNumber")
 	private String mobileNumber;
-	public CustomerInfo() {
+	public Customers() {
 		
 	}
 	
 	
-	public CustomerInfo(Long id, String fName, String lName, String gender, String address, String email, Date birthday,
+	public Customers(Long id, String fName, String lName, String gender, String address, String email, Date birthday,
 			String profession, String mobileNumber) {
 		super();
 		this.id = id;

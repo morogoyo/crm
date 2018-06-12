@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.morogoyodesings.CRM.data.CustomerInfo;
+import com.morogoyodesings.CRM.data.Customers;
 import com.morogoyodesings.CRM.repositories.CustomerRepository;
 
 @RestController
@@ -22,8 +22,8 @@ public class CustomerInfoControllers {
 		return "<h1>Welcome to your CRM</h1>";
 	}
 	@GetMapping("info")
-	public List<CustomerInfo> getAllCustomers(){
-		return customerRepo.findAll();
+	public List<Customers> getAllCustomers(){
+		return (List<Customers>) customerRepo.findAll();
 		
 	}
 
