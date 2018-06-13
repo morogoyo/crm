@@ -17,9 +17,9 @@ public class Customers {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
-	@Column(name = "fName")
+	@Column(name = "f_Name")
 	private String fName;
-	@Column(name = "lName")
+	@Column(name = "l_Name")
 	private String lName;
 	@Column(name = "gender")
 	private String gender;
@@ -31,7 +31,7 @@ public class Customers {
 	private Date birthday;
 	@Column(name = "profession")
 	private String profession;
-	@Column(name = "mobileNumber")
+	@Column(name = "mobile_Number")
 	private String mobileNumber;
 
 	public Customers() {

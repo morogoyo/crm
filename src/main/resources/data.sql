@@ -1,5 +1,2 @@
-INSERT INTO customers(fName,lName,gender,address,email,profession,mobileNumber,birthday)
-VALUES('Rene','Torres','Male','Sterling Spring Rd. Orlando Fl','torres.rene@outlook.com','Dev',1234567,'1979-10-11');
-					
-INSERT INTO customers(fName,lName,gender,address,email,profession,mobileNumber,birthday)
-VALUES('user1','Torres','Male','Sterling Spring Rd. Orlando Fl','user1@outlook.com','Dev',1234567,'1979-10-11');					
+INSERT INTO crm.customers(id,f_name,l_name,gender,address,email,profession,mobile_number,birthday)VALUES(1,'Rene','Torres','Male','Sterling Spring Rd. Orlando Fl','torres.rene@outlook.com','Dev',1234567,'1979-10-11');					
+INSERT INTO crm.customers(id,f_name,l_name,gender,address,email,profession,mobile_number,birthday)VALUES(2,'user1','Torres','Male','Sterling Spring Rd. Orlando Fl','user1@outlook.com','Dev',1234567,'1979-10-11');					
