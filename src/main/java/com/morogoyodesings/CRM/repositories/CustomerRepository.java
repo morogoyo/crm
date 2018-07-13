@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.morogoyodesings.CRM.data.Customers;
 
-public interface CustomerRepository extends JpaRepository<Customers, Long> {
+public interface CustomerRepository extends JpaRepository<Customers, Integer> {
 
 	
 	

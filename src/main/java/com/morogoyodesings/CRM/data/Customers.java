@@ -14,9 +14,9 @@ import javax.persistence.Table;
 public class Customers {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
-	private Long id;
+	private Integer id;
 	@Column(name = "f_name")
 	private String fName;
 	@Column(name = "l_name")
@@ -38,7 +38,7 @@ public class Customers {
 		super();
 	}
 
-	public Customers(Long id, String fName, String lName, String gender, String address, String email, Date birthday,
+	public Customers(Integer id, String fName, String lName, String gender, String address, String email, Date birthday,
 			String profession, String mobileNumber) {
 		super();
 		this.id = id;
@@ -72,7 +72,7 @@ public class Customers {
 		return gender;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
@@ -108,7 +108,7 @@ public class Customers {
 		this.gender = gender;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
