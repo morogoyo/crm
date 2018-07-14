@@ -1,20 +1,7 @@
-EndPoints
+Endpoint Documentation will be at this address
+localhost:8080/swagger-ui.html
 
-GET
-localhost:8080/customer/{id}
+to verify the database use the following url
 
-POST 
-localhost:8080/insert
-
-PUT
-localhost:8080/update/{id}
-
-DELETE
-localhost:8080/delete/customer/{id}
-
-
-
-
-PAYLOAD
-
+localhost:8080/h2
 

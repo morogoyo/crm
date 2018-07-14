@@ -23,11 +23,11 @@ public class CustomerInfoControllers {
 	private CustomerRepository customerRepo;
 
 
-//	@GetMapping(value = "/home")
-//	public String homePage(){
-//
-//		return "<h1>Welcome to your CRM</h1>";
-//	}
+	@GetMapping(value = "/home")
+	public String homePage(){
+
+		return "<h1>Welcome to your CRM</h1>";
+	}
 
 //	@RequestMapping(value = "/")
 //	public List<Customers> getAllCustomers(){
@@ -35,10 +35,10 @@ public class CustomerInfoControllers {
 //
 //	}
 	
-//	@RequestMapping(value = "/{id}")
-//	public Optional<Customers> getOneCustomer(@PathVariable int id) {
-//		return customerRepo.findById(id);
-//	}
+	@RequestMapping(method = RequestMethod.GET ,value = "/{id}")
+	public Optional<Customers> getOneCustomer(@PathVariable int id) {
+		return customerRepo.findById(id);
+	}
 
 
 	
