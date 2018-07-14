@@ -1,8 +1,7 @@
-package com.morogoyodesings.CRM.repositories;
+package com.morogoyodesigns.CRM.repositories;
 
+import com.morogoyodesigns.CRM.data.Customers;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.morogoyodesings.CRM.data.Customers;
 
 public interface CustomerRepository extends JpaRepository<Customers, Integer> {
 
