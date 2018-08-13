@@ -1,62 +1,57 @@
-package com.morogoyodesigns.CRM.controllers;
+package com.morogoyodesigns.CRM.client.restControllers;
 
 import java.util.List;
 import java.util.Optional;
 
-
-import com.morogoyodesigns.CRM.data.Customers;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.morogoyodesigns.CRM.repositories.CustomerRepository;
+import com.morogoyodesigns.CRM.client.data.Client;
+import com.morogoyodesigns.CRM.client.repositories.ClientRepository;
+
+
 
 @RestController
 @RequestMapping(value="/customer")
-public class CustomerInfoControllers {	
+public class ClientInfoControllers {	
 	
 	@Autowired
-	private CustomerRepository customerRepo;
+	private ClientRepository client;
 
 
-	@GetMapping(value = "/home")
-	public String homePage(){
 
-		return "<h1>Welcome to your CRM</h1>";
+	@RequestMapping(method = RequestMethod.GET ,value = "/")
+	public List<Client> getAllCustomers(){
+		return  client.findAll();
+
 	}
-
-//	@RequestMapping(value = "/")
-//	public List<Customers> getAllCustomers(){
-//		return  customerRepo.findAll();
-//
-//	}
 	
 	@RequestMapping(method = RequestMethod.GET ,value = "/{id}")
-	public Optional<Customers> getOneCustomer(@PathVariable int id) {
-		return customerRepo.findById(id);
+	public Optional<Client> getOneCustomer(@PathVariable int id) {
+		return client.findById(id);
 	}
 
 
 	
 	@RequestMapping(method = RequestMethod.POST, value="/insert" )
-	public void insertCustomer(@RequestBody Customers customer) {
+	public void insertCustomer(@RequestBody Client customer) {
 		System.out.println(customer.getfName());
-		customerRepo.save(customer);
+		client.save(customer);
 		
 	}
 
 	@RequestMapping(method = RequestMethod.PUT , value = "/update{id}")
-    public void updateCustomersInfo(@PathVariable("id") int id , @RequestBody Customers updateCustomer){
+    public void updateCustomersInfo(@PathVariable("id") int id , @RequestBody Client updateCustomer){
 
-		Customers customerToUpdate = customerRepo.getOne(id);
+		Client customerToUpdate = client.getOne(id);
 		System.out.println(customerToUpdate.getfName());
 		customerToUpdate.setlName(updateCustomer.getlName());
 		customerToUpdate.setfName(updateCustomer.getfName());
-		customerRepo.save(updateCustomer);
+		client.save(updateCustomer);
 
 
     }
@@ -64,9 +59,9 @@ public class CustomerInfoControllers {
     @RequestMapping(value = "/delete{id}" , method = RequestMethod.DELETE)
     public void deleteCustomer(@PathVariable("id") int id){
 
-		Customers deletedClient = customerRepo.getOne(id);
+		Client deletedClient = client.getOne(id);
 		System.out.println(deletedClient);
-		customerRepo.deleteById(id);
+		client.deleteById(id);
 
 	}
 

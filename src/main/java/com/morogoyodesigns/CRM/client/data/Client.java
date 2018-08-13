@@ -1,4 +1,4 @@
-package com.morogoyodesigns.CRM.data;
+package com.morogoyodesigns.CRM.client.data;
 
 import java.util.Date;
 
@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "customers")
-public class Customers {
+public class Client {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,10 +34,10 @@ public class Customers {
 	@Column(name = "mobile_number")
 	private Integer mobileNumber;
 
-    public Customers() {
+    public Client() {
     }
 
-    public Customers(String fName, String lName, String gender, String address, String email, Date birthday, String profession, Integer mobileNumber) {
+    public Client(String fName, String lName, String gender, String address, String email, Date birthday, String profession, Integer mobileNumber) {
         this.fName = fName;
         this.lName = lName;
         this.gender = gender;
