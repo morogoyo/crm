@@ -9,8 +9,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 @Entity
-@Table(name = "customers")
+@Table(name = "company")
 public class Company {
 
 	@Id
@@ -22,31 +25,33 @@ public class Company {
 	private String companyName;
 	
 	
-	@Column(name = "address")
+	@Column(name = "company_address")
 	private String address;
 	
-	@Column(name = "email")
+	@Column(name = "company_email")
 	private String email;
 	
-	@Column(name = "description")
+	@Column(name = "company_description")
 	private String description;
 	
 	@Column(name = "company_phone_number")
 	private Integer companyPhoneNumber;
 	
 	@Column(name = "date_added")
+	@CreationTimestamp
 	private Date dateAdded;
 	
 	@Column(name = "date_updated")
+	@UpdateTimestamp
 	private Date dateUpdated;
 
     public Company() {
     }
-    
-    
 
+    
 	public Company(Integer id, String companyName, String address, String email, String description,
 			Integer companyPhoneNumber, Date dateAdded, Date dateUpdated) {
+		
 		this.id = id;
 		this.companyName = companyName;
 		this.address = address;
@@ -56,7 +61,6 @@ public class Company {
 		this.dateAdded = dateAdded;
 		this.dateUpdated = dateUpdated;
 	}
-
 
 
 	public Integer getId() {
@@ -122,15 +126,9 @@ public class Company {
 	public void setDateUpdated(Date dateUpdated) {
 		this.dateUpdated = dateUpdated;
 	}
+    
+    
 
-
-
-	@Override
-	public String toString() {
-		return "Company [id=" + id + ", companyName=" + companyName + ", address=" + address + ", email=" + email
-				+ ", description=" + description + ", companyPhoneNumber=" + companyPhoneNumber + ", dateAdded="
-				+ dateAdded + ", dateUpdated=" + dateUpdated + "]";
-	}
-
+	
     
 }

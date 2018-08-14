@@ -32,30 +32,8 @@ INSERT INTO customers(ID,F_NAME,L_NAME,GENDER,ADDRESS,EMAIL,PROFESSION,MOBILE_NU
 INSERT INTO customers(ID,F_NAME,L_NAME,GENDER,ADDRESS,EMAIL,PROFESSION,MOBILE_NUMBER,BIRTHDAY,DATE_ADDED ,DATE_UPDATED)VALUES(3,'user2','user2LastName','Male','Sterling Spring Rd. Orlando Fl','torres.rene@outlook.com','Dev',1234567,now(),now(),now());					
 INSERT INTO customers(ID,F_NAME,L_NAME,GENDER,ADDRESS,EMAIL,PROFESSION,MOBILE_NUMBER,BIRTHDAY,DATE_ADDED ,DATE_UPDATED)VALUES(4,'user3','user3LastName','Male','Sterling Spring Rd. Orlando Fl','user3@outlook.com','Dev',1234567,now(),now(),now());
 
-INSERT INTO company(ID,COMPANY_NAME ,
-   COMPANY_ADDRESS ,
-   COMPANY_EMAIL ,
-   COMPANY_DESCRIPTION ,
-   COMPANY_PHONE_NUMBER ,
-   DATE_ADDED ,
-   DATE_UPDATED   )VALUES(1,'Company1','123 main st\. Orlando Fl','company1@outlook.com','Development company',1234567,now(),now());
-
-
-INSERT INTO company(ID,COMPANY_NAME ,
-   COMPANY_ADDRESS ,
-   COMPANY_EMAIL ),
-   COMPANY_DESCRIPTION ),
-   COMPANY_PHONE_NUMBER ,
-   DATE_ADDED ,
-   DATE_UPDATED   )VALUES(2,'Company2','456 main st\. Orlando Fl','company2@outlook.com','web Development company',1234567,now(),now());
-
-
-INSERT INTO company(ID,COMPANY_NAME ,
-   COMPANY_ADDRESS ,
-   COMPANY_EMAIL ,
-   COMPANY_DESCRIPTION ,
-   COMPANY_PHONE_NUMBER ,
-   DATE_ADDED ,
-   DATE_UPDATED )VALUES(3,'Company3','789 main st\. Orlando Fl','company3@outlook.com','Development company',1234567,now(),now());
+INSERT INTO company(ID,COMPANY_NAME,COMPANY_ADDRESS,COMPANY_EMAIL,COMPANY_DESCRIPTION,COMPANY_PHONE_NUMBER,DATE_ADDED,DATE_UPDATED)VALUES(1,'Company1','123 main st. Orlando Fl','company1@outlook.com','Development company',1234567,now(),now());
+INSERT INTO company(ID,COMPANY_NAME,COMPANY_ADDRESS,COMPANY_EMAIL,COMPANY_DESCRIPTION,COMPANY_PHONE_NUMBER,DATE_ADDED,DATE_UPDATED)VALUES(2,'Company2','456 main st. Orlando Fl','company2@outlook.com','web Development company',1234567,now(),now());
+INSERT INTO company(ID,COMPANY_NAME,COMPANY_ADDRESS,COMPANY_EMAIL,COMPANY_DESCRIPTION,COMPANY_PHONE_NUMBER,DATE_ADDED,DATE_UPDATED)VALUES(3,'Company3','789 main st. Orlando Fl','company3@outlook.com','Development company',1234567,now(),now());
 
 					
