@@ -17,26 +17,41 @@ public class SwaggerConfig  {
 
     @Bean
     public Docket getCustomer(){
-        return  new Docket(DocumentationType.SWAGGER_2)
+        return  new Docket(DocumentationType.SWAGGER_2).groupName("customer")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.morogoyodesigns.CRM.restControllers"))
+                .apis(RequestHandlerSelectors.basePackage("com.morogoyodesigns.CRM.client.restControllers"))
                 .paths(regex("/customer.*"))
                 .build()
-                ;//.apiInfo(restControllers());
+                .apiInfo(restControllers());
 
 
     }
 
-//    private ApiInfo restControllers(){
-//        return  new ApiInfoBuilder()
-//                .title("Get customers")
-//                .description("All restControllers").
-//                .build();
-//    }
+    private ApiInfo restControllers(){
+        return  new ApiInfoBuilder()
+                .title("Get customers")
+                .description("All restControllers")
+                .build();
+    }
 
 
+    @Bean
+    public Docket getCompany(){
+        return  new Docket(DocumentationType.SWAGGER_2).groupName("company")
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.morogoyodesigns.CRM.company.controllers"))
+                .paths(regex("/company.*"))
+                .build()
+                .apiInfo(companyRestControllers());
 
 
+    }
 
+    private ApiInfo companyRestControllers(){
+        return  new ApiInfoBuilder()
+                .title("Get Company Info")
+                .description("All restControllers related to company information")
+                .build();
+    }
 
 }
