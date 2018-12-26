@@ -1,4 +1,4 @@
-package com.morogoyodesings.CRM;
+package com.morogoyodesigns.CRM;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
